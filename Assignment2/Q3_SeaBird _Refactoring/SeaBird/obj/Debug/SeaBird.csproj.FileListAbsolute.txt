@@ -1,0 +1,23 @@
+G:\INFO8240 - Systems Design\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.exe.config
+G:\INFO8240 - Systems Design\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.exe
+G:\INFO8240 - Systems Design\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.pdb
+G:\INFO8240 - Systems Design\Lab.7.10.2015\SeaBird\SeaBird\obj\Debug\SeaBird.exe
+G:\INFO8240 - Systems Design\Lab.7.10.2015\SeaBird\SeaBird\obj\Debug\SeaBird.pdb
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.exe.config
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\obj\Debug\SeaBird.exe
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\obj\Debug\SeaBird.pdb
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.exe
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\bin\Debug\SeaBird.pdb
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird\SeaBird\obj\Debug\SeaBird.csprojResolveAssemblyReference.cache
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.exe.config
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.exe
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.pdb
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.exe
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.pdb
+C:\Users\Nicholas\Backups\College 2015 - 2016\Systems Analysis\download (15)\Lab.7.10.2015\SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.csprojResolveAssemblyReference.cache
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.exe.config
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.exe
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.pdb
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.exe
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\bin\Debug\SeaBird.pdb
+C:\Users\JOE\Desktop\Question 3 - SeaBird - Refactored\SeaBird\obj\Debug\SeaBird.csprojResolveAssemblyReference.cache
