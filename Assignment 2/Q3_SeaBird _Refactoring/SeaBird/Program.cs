@@ -18,6 +18,7 @@ namespace EngineeringService
     // Target 
     public sealed class Aircraft : IAircraft
     {
+        const int TAKEOFF_HEIGHT_M = 200;
         int height;
         bool airborne;
         public Aircraft()
@@ -30,7 +31,7 @@ namespace EngineeringService
         {
             Console.WriteLine("Aircraft engine takeoff");
             airborne = true;
-            height = 200; //metres
+            height = TAKEOFF_HEIGHT_M; //metres
         }
 
         public bool Airborne
@@ -58,11 +59,11 @@ public class Seacraft : ISeacraft
     int speed = 0;
     //introducing a meaningfully named variable for 
     //the Increase amount is part of refactoring
-    int speedIncreaseStep = 10;
+    const int SPEED_INCREASED_STEP = 10;
 
     public virtual void IncreaseRevs()
     {
-        speed += speedIncreaseStep;
+        speed += SPEED_INCREASED_STEP;
         Console.WriteLine("Seacraft engine increases revs to " + speed + " knots");
     }
 
@@ -96,10 +97,11 @@ public class Seabird : Seacraft, IAircraft
     {
         //creating named constants for speedThreshold and heightIncreaseAmount
         //is part of refactoring
-        int speedThreshold = 40;
-        int heightIncreaseAmount = 100;
-        if (Speed > speedThreshold)
-            height += heightIncreaseAmount;
+        const int SPEED_THRESHOLD_KMH = 40;
+        const int HEIGHT_INCREASED_AMOUNT_M = 100;
+
+        if (Speed > SPEED_THRESHOLD_KMH)
+            height += HEIGHT_INCREASED_AMOUNT_M;
     }
 
     // This method is common to both Target and Adaptee
@@ -113,14 +115,33 @@ public class Seabird : Seacraft, IAircraft
     {
         get {
              //Creating a named constant for takeOffHeight is part of refactoring
-             int takeOffHeight = 50;
-             return height > takeOffHeight; }
+             const int TAKEOFF_HEIGHT_M = 50;
+             return height > TAKEOFF_HEIGHT_M; 
+        }
     }
 }
 
 class InventorTest
 {
+    //Refactoring Main method using Extract method by
+    //TestAirCraftEngine(), TestSeaBirdEngine(), and IncreaseSpeedOfSeaBird(IAircraft seabird)
+    //which can reduce the Cyclomatic Complexity to 1 from 3.
     static void Main()
+    {
+        // No adapter
+        TestAirCraftEngine();
+
+        // Classic usage of an Adapter
+        IAircraft seabird = TestSeaBirdEngine();
+
+        // Two-way adapter: using seacraft instructions on an IAircraft object
+        // (where they are not in the IAricraft interface)
+        IncreaseSpeedOfSeaBird(seabird);
+
+        Console.ReadKey();
+    }
+
+    private static void TestAirCraftEngine()
     {
         // No adapter
         Console.WriteLine("Experiment 1: test the aircraft engine");
@@ -128,15 +149,18 @@ class InventorTest
         aircraft.TakeOff();
         if (aircraft.Airborne)
             Console.WriteLine("The aircraft engine is fine, flying at " + aircraft.Height + "metres");
-
+    }
+    private static IAircraft TestSeaBirdEngine()
+    {
         // Classic usage of an Adapter
         Console.WriteLine("\nExperiment 2: Use the engine in the SeaBird");
         IAircraft seabird = new Seabird();
         seabird.TakeOff(); // and automatically increases speed
         Console.WriteLine("The SeaBird took off");
-
-        // Two-way adapter: using seacraft instructions on an IAircraft object
-        // (where they are not in the IAricraft interface)
+        return seabird;
+    }
+    private static void IncreaseSpeedOfSeaBird(IAircraft seabird)
+    {
         Console.WriteLine("\nExperiment 3: Increase the speed of the Seabird:");
         (seabird as ISeacraft).IncreaseRevs();
         (seabird as ISeacraft).IncreaseRevs();
@@ -144,8 +168,6 @@ class InventorTest
             Console.WriteLine("Seabird flying at height " + seabird.Height +
                         " metres and speed " + (seabird as ISeacraft).Speed + " knots");
         Console.WriteLine("Experiments successful; the Seabird flies!");
-
-        Console.ReadKey();
     }
 }
 
