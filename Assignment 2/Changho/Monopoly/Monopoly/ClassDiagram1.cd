@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="Monopoly.Board" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIIAAEAAAAAAAAAAEBQBQAIQARAAAAIAAEAQ=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.Die" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAJAAAACAAAAAQAAAAAAAAAAAAAAAAAAAQAAAABAAA=</HashCode>
+      <FileName>Die.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.GoSqaure" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>GoSqaure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.IncomeTaxSquare">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>IncomeTaxSquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.LotSquare" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>LotSquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.MonopolyGame" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAABAAAAAAAAAAAgAABAIAAAgAAAAAI=</HashCode>
+      <FileName>MonopolyGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.Piece" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Piece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.Player" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQGABAEAAIAAAAAAAQAAAAEAAAgIAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.Program" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.PropertySquare" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertySquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.RailroadSquare" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>RailroadSquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.RegularSquare">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>RegularSquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.Square" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAACEAAAABAAA=</HashCode>
+      <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monopoly.UtilitySquare" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>UtilitySquare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
