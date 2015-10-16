@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeaBird 
+namespace SeaBird
 {
     class Seabird : Seacraft, IAircraft
     {
@@ -12,6 +12,12 @@ namespace SeaBird
         const int INCREASE_SPEED_STEP = 50;
         const int MAX_SPEED = 869;
         const int INCREASE_HIGHT_STEP = 500;
+        const int RAISE_NOSE_ANGLE_MAX = 90;
+        const int RAISE_NOSE_ANGLE_MIN = 0;
+        const int TAXI_SPEED = 50;
+
+
+
         public bool reachTakeOfArea;
         public bool reachDistination;
         public bool engineIsOn;
@@ -19,6 +25,9 @@ namespace SeaBird
         int speed;
         bool airborne;
         int height = 0;
+
+        IAircraft aircraft = new Aircraft();
+
         // A two-way adapter hides and routes the Target's methods
         //  Use Seacraft instructions to implement this one 
         public void TakeOff()
@@ -62,88 +71,24 @@ namespace SeaBird
                 return height > TAKEOFF_HEIGHT_M;
             }
         }
+        /// <summary>
+        /// /////////////////
+        /// </summary>
+        /// 
 
-        ////////////////
-
-        public void TurnEngineOn()
+        public void LandOn()
         {
-            engineIsOn = true;
-            speed = 0;
-            height = 0;
-            Console.WriteLine("Aircraft Engine is ON");
+            aircraft.LandOn();
         }
 
-        public void IncreaseSpeed()
+
+        public void TakeOFF()
         {
-            speed += INCREASE_SPEED_STEP;
-            Console.WriteLine("Aircraft increasing speed by " + INCREASE_SPEED_STEP + " Kph");
-            Console.WriteLine("Aircraft current speed is " + speed + " Kph");
+            aircraft.TakeOFF();
+         
         }
 
-        public void IncreaseSpeedToMax()
-        {
-            speed = MAX_SPEED;
-            Console.WriteLine("Aircraft increasing speed to the maximum speed ");
-            Console.WriteLine("Aircraft current speed is " + speed + " Kph");
-        }
 
-        public void ReachTakeOfArea()
-        {
-            reachTakeOfArea = true;
-            Console.WriteLine("Aircraft reached the take off area");
-        }
 
-        public void Stop()
-        {
-            speed = 0;
-            height = 0;
-            Console.WriteLine("Aircraft stopped");
-        }
-
-        public void RaiseNose()
-        {
-            noseIsRaise = true;
-            Console.WriteLine("Aircraft Raised it's Nose");
-        }
-
-        public void IncreaseHight()
-        {
-            height += INCREASE_HIGHT_STEP;
-            Console.WriteLine("Aircraft increasing hight by " + INCREASE_HIGHT_STEP + " km");
-            Console.WriteLine("Aircraft current hight is " + height + " Km");
-        }
-
-        public void Wait()
-        {
-            Console.WriteLine("Aircraft flying at constant speed and hight");
-            System.Threading.Thread.Sleep(10000);
-        }
-
-        public void ReachDestination()
-        {
-            Console.WriteLine("Aircraft reached destination");
-            reachDistination = true;
-        }
-
-        public void LowerNose()
-        {
-            Console.WriteLine("Aircraft lowered it's Nose");
-            noseIsRaise = false;
-        }
-
-        public void DecreaseSpeed()
-        {
-            speed -= INCREASE_SPEED_STEP;
-            Console.WriteLine("Aircraft decreased speed by " + INCREASE_SPEED_STEP + " Kph");
-            Console.WriteLine("Aircraft current speed is " + speed + " Kph");
-        }
-
-        public void TurnEngineOff()
-        {
-            engineIsOn = false;
-            speed = 0;
-            height = 0;
-            Console.WriteLine("Aircraft Engine is OFF");
-        }
     }
 }

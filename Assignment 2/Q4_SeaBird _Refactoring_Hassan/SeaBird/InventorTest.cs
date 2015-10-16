@@ -28,12 +28,17 @@ namespace SeaBird
 
         private static void TestAirCraftEngine()
         {
+
+            IAircraft aircraft = new Aircraft();
+            aircraft.TakeOFF();
+            aircraft.LandOn();
+            /*
             const int MIN_SPEED_TO_LAND = 100;
             const int MAX_HIGHT = 1100;
             IAircraft aircraft = new Aircraft();
             aircraft.TurnEngineOn();
             
-            aircraft.IncreaseSpeed();
+            aircraft.Accelerate();
             aircraft.ReachTakeOfArea();
             aircraft.Stop();
             System.Threading.Thread.Sleep(10000);
@@ -46,7 +51,7 @@ namespace SeaBird
 
             while (aircraft.Height < MAX_HIGHT)
             {
-                aircraft.IncreaseHight();
+                aircraft.IncreaseHeight();
                 aircraft.Wait();
             }
 
@@ -54,12 +59,13 @@ namespace SeaBird
             aircraft.LowerNose();
             while(aircraft.Speed>MIN_SPEED_TO_LAND)
             {
-                aircraft.DecreaseSpeed();
+                aircraft.Decelerate();
                 aircraft.Wait();
             }
             
             aircraft.Stop();
             aircraft.TurnEngineOff();
+            */
             /*
             // No adapter
             Console.WriteLine("Experiment 1: test the aircraft engine");
@@ -74,7 +80,7 @@ namespace SeaBird
             // Classic usage of an Adapter
             Console.WriteLine("\nExperiment 2: Use the engine in the SeaBird");
             IAircraft seabird = new Seabird();
-            seabird.TakeOff(); // and automatically increases speed
+            //seabird.TakeOff(); // and automatically increases speed
             Console.WriteLine("The SeaBird took off");
             return seabird;
         }

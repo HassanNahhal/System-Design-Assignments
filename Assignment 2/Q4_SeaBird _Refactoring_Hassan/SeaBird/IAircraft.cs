@@ -9,21 +9,10 @@ namespace SeaBird
     interface IAircraft
     {
         bool Airborne { get; }
-        void TakeOff();
+        void TakeOFF();
         int Height { get; }
         int Speed { get; }
-        void TurnEngineOn();
-        void IncreaseSpeed();
-        void IncreaseSpeedToMax();
-        void ReachTakeOfArea();
-        void Stop();
-        void RaiseNose();
-        void IncreaseHight();
-        void Wait();
-        void ReachDestination();
-        void LowerNose();
-        void DecreaseSpeed();
-        void TurnEngineOff();
+        void LandOn();
 
     }
 }
