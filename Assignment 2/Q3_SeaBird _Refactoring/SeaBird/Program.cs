@@ -57,6 +57,7 @@ public interface ISeacraft
 public class Seacraft : ISeacraft
 {
     int speed = 0;
+    //**refactoring
     //introducing a meaningfully named variable for 
     //the Increase amount is part of refactoring
     const int SPEED_INCREASED_STEP = 10;
@@ -90,11 +91,12 @@ public class Seabird : Seacraft, IAircraft
     {
         get { return height; }
     }
-
+    //**refactoring
     //Creating this method is part of refactoring since it keeps each method performing
     //one specific function, making the IncreaseRevs() method within Seabird shorter
     public void IncreaseHeight()
     {
+        //**refactoring
         //creating named constants for speedThreshold and heightIncreaseAmount
         //is part of refactoring
         const int SPEED_THRESHOLD_KMH = 40;
@@ -123,6 +125,7 @@ public class Seabird : Seacraft, IAircraft
 
 class InventorTest
 {
+    //**refactoring
     //Refactoring Main method using Extract method by
     //TestAirCraftEngine(), TestSeaBirdEngine(), and IncreaseSpeedOfSeaBird(IAircraft seabird)
     //which can reduce the Cyclomatic Complexity to 1 from 3.

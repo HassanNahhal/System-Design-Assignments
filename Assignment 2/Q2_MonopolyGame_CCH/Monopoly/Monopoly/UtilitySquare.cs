@@ -17,9 +17,9 @@ namespace Monopoly
 
         public override int GetRent()
         {
-            //Due to Cup is singleton, hope same value with current player
+            //Due to Cup is singleton,  same value with current player
             Cup cup = Cup.Instance;
-            Console.WriteLine(SQUARE_NAME + "Get Rent");
+            Console.WriteLine(SQUARE_NAME + "Get Rent" + (cup.FaceTotal * 4));
             return cup.FaceTotal * 4;
         }
     }
