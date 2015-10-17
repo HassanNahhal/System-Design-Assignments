@@ -41,13 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aircraft.cs" />
-    <Compile Include="IAircraft.cs" />
-    <Compile Include="InventorTest.cs" />
-    <Compile Include="ISeacraft.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seabird.cs" />
-    <Compile Include="Seacraft.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,21 +9,6 @@ namespace SeaBird
     class Seabird : Seacraft, IAircraft
     {
         const int TAKEOFF_HEIGHT_M = 200;
-        const int INCREASE_SPEED_STEP = 50;
-        const int MAX_SPEED = 869;
-        const int INCREASE_HIGHT_STEP = 500;
-        const int RAISE_NOSE_ANGLE_MAX = 90;
-        const int RAISE_NOSE_ANGLE_MIN = 0;
-        const int TAXI_SPEED = 50;
-
-
-
-        public bool reachTakeOfArea;
-        public bool reachDistination;
-        public bool engineIsOn;
-        public bool noseIsRaise;
-        int speed;
-        bool airborne;
         int height = 0;
 
         IAircraft aircraft = new Aircraft();

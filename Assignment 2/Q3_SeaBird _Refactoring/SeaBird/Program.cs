@@ -13,17 +13,22 @@ namespace EngineeringService
         bool Airborne { get; }
         void TakeOff();
         int Height { get; }
+        int Speed { get; }
     }
 
     // Target 
     public sealed class Aircraft : IAircraft
     {
         const int TAKEOFF_HEIGHT_M = 200;
+        const int SPEED_STEP_KMH = 10;
+        const int MAX_SPEED_KMH = 500;
+        int speed;
         int height;
         bool airborne;
         public Aircraft()
         {
             height = 0;
+            speed = 0;
             airborne = false;
         }
 
@@ -34,6 +39,22 @@ namespace EngineeringService
             height = TAKEOFF_HEIGHT_M; //metres
         }
 
+        public void Accelerate()
+        {
+            Console.WriteLine("Aircraft accelerate");
+            speed += SPEED_STEP_KMH;
+            if (speed > MAX_SPEED_KMH)
+                speed = MAX_SPEED_KMH;
+        }
+
+        public void Decelerate()
+        {
+            Console.WriteLine("Aircraft accelerate");
+            speed -= SPEED_STEP_KMH;
+            if (speed < 0)
+                speed = 0;
+        }
+
         public bool Airborne
         {
             get { return airborne; }
@@ -42,6 +63,11 @@ namespace EngineeringService
         public int Height
         {
             get { return height; }
+        }
+
+        public int Speed
+        {
+            get { return speed; }
         }
     }
 }  // end of EngineeringService
@@ -57,7 +83,7 @@ public interface ISeacraft
 public class Seacraft : ISeacraft
 {
     int speed = 0;
-    //**refactoring
+    //**Refactoring
     //introducing a meaningfully named variable for 
     //the Increase amount is part of refactoring
     const int SPEED_INCREASED_STEP = 10;
@@ -91,12 +117,12 @@ public class Seabird : Seacraft, IAircraft
     {
         get { return height; }
     }
-    //**refactoring
+    //**Refactoring
     //Creating this method is part of refactoring since it keeps each method performing
     //one specific function, making the IncreaseRevs() method within Seabird shorter
     public void IncreaseHeight()
     {
-        //**refactoring
+        //**Refactoring
         //creating named constants for speedThreshold and heightIncreaseAmount
         //is part of refactoring
         const int SPEED_THRESHOLD_KMH = 40;
@@ -125,7 +151,7 @@ public class Seabird : Seacraft, IAircraft
 
 class InventorTest
 {
-    //**refactoring
+    //**Refactoring
     //Refactoring Main method using Extract method by
     //TestAirCraftEngine(), TestSeaBirdEngine(), and IncreaseSpeedOfSeaBird(IAircraft seabird)
     //which can reduce the Cyclomatic Complexity to 1 from 3.
