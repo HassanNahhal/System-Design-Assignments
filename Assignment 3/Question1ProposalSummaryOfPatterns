@@ -1,0 +1,12 @@
+The WaterData object will come from the robot boat, and the information it gathers will need to be seen by several devices.  
+In a case such as this, the observer pattern is appropriate to use because it is specifically designed for situations 
+in which one data source that is updated is able to “push” those updates to multiple places.
+
+To meet the requirement of people being able to have their own data acquisition displays and using 
+them as pluggable components, the Adapter pattern is appropriate.  This pattern is specifically used in 
+cases where a system has to send data to different outside systems that use it in their own individual ways.
+
+One additional pattern that could be used is the Façade pattern, this is because a controller 
+for the boat should be strictly controlled, and an opaque façade could help protect the system from 
+other systems gaining unauthorized access.  
+
