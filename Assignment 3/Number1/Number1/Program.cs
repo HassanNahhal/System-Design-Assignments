@@ -10,16 +10,16 @@ namespace Number1
     {
         static void Main(string[] args)
         {
-            var wateraData = new WaterData();
 
-            var desktopDataDipslay = new DesktopDataDipslay(wateraData);
-            var webDataDisplay = new WebDataDisplay(wateraData);
-            var mobileDataDisplay = new MobileDataDisplay(wateraData);
-            var thirdPartyDisplay = new ThirdPartyDisplay(wateraData);
+            Facade facade = new Facade();
 
-            wateraData.SetMeasurements(80, 65, 30.4f);
-            wateraData.SetMeasurements(82, 70, 29.2f);
-            wateraData.SetMeasurements(78, 90, 29.2f);
+            facade.ContolTheLab();
+
+
+            facade.GetData(33, 12);
+            facade.GetData(15, 45);
+            facade.GetData(2, 77);
+
 
             // Wait for user
             Console.ReadKey();

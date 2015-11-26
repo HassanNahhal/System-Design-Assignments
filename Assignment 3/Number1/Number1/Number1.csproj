@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="DesktopDataDipslay.cs" />
+    <Compile Include="Facade.cs" />
     <Compile Include="IDisplay.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="ISubject.cs" />

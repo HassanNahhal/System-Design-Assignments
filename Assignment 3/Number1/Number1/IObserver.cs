@@ -8,6 +8,6 @@ namespace Number1
 {
     interface IObserver
     {
-        void Update(float temperature, float humidity, float pressure);
+        void Update(float phLevel, float quality);
     }
 }

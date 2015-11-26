@@ -8,8 +8,8 @@ namespace Number1
 {
     class WebDataDisplay : IObserver, IDisplay
     {
-        private float _currentPressure = 29.92f;
-        private float _lastPressure;
+        private float _currentTemperature = 0f;
+        private float _lastTemperature;
         private WaterData _waterData;
 
         public WebDataDisplay(WaterData weatherData)
@@ -18,29 +18,29 @@ namespace Number1
             weatherData.RegisterObserver(this);
         }
 
-        public void Update(float temperature, float humidity, float pressure)
+        public void Update(float temperature, float quality)
         {
-            _lastPressure = _currentPressure;
-            _currentPressure = pressure;
+            _lastTemperature = _currentTemperature;
+            _currentTemperature = temperature;
 
             Display();
         }
 
         public void Display()
         {
-            Console.Write("Forecast: ");
+            Console.WriteLine("Water Temperature: ");
 
-            if (_currentPressure > _lastPressure)
+            if (_currentTemperature > _lastTemperature)
             {
-                Console.WriteLine("Improving weather on the way!");
+                Console.WriteLine("Water getting hotter!");
             }
-            else if (_currentPressure == _lastPressure)
+            else if (_currentTemperature == _lastTemperature)
             {
-                Console.WriteLine("More of the same");
+                Console.WriteLine("Same temperature");
             }
-            else if (_currentPressure < _lastPressure)
+            else if (_currentTemperature < _lastTemperature)
             {
-                Console.WriteLine("Watch out for cooler, rainy weather");
+                Console.WriteLine("Watch out for cooler, and freezing water");
             }
         }
     }

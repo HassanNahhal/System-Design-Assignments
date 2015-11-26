@@ -9,7 +9,7 @@ namespace Number1
     class MobileDataDisplay : IObserver, IDisplay
     {
         private float _temperature;
-        private float _humidity;
+        private float _quality;
         private ISubject _weatherData;
 
         public MobileDataDisplay(ISubject weatherData)
@@ -18,17 +18,17 @@ namespace Number1
             weatherData.RegisterObserver(this);
         }
 
-        public void Update(float temperature, float humidity, float pressure)
+        public void Update(float temperature, float quality)
         {
             this._temperature = temperature;
-            this._humidity = humidity;
+            this._quality = quality;
             Display();
         }
 
         public void Display()
         {
-            Console.WriteLine("Current conditions: " + _temperature
-                + "F degrees and " + _humidity + "% humidity");
+            Console.WriteLine("Current Water Data: " + _temperature
+                + "F degrees and " + _quality + "% dirt");
         }
     }
 }

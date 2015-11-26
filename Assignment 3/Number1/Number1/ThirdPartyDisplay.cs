@@ -20,7 +20,7 @@ namespace Number1
             waterData.RegisterObserver(this);
         }
 
-        public void Update(float temperature, float humidity, float pressure)
+        public void Update(float temperature, float quality)
         {
             _tempSum += temperature;
             _numReadings++;

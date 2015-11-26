@@ -10,8 +10,7 @@ namespace Number1
     {
         private List<IObserver> _observers = new List<IObserver>();
         private float _temperature;
-        private float _humidity;
-        private float _pressure;
+        private float _quality;
 
         public void RegisterObserver(IObserver observer)
         {
@@ -27,7 +26,7 @@ namespace Number1
         {
             foreach (IObserver observer in _observers)
             {
-                observer.Update(_temperature, _humidity, _pressure);
+                observer.Update(_temperature, _quality);
             }
         }
 
@@ -36,11 +35,10 @@ namespace Number1
             NotifyObservers();
         }
 
-        public void SetMeasurements(float temperature, float humidity, float pressure)
+        public void SetMeasurements(float temperature, float quality)
         {
             this._temperature = temperature;
-            this._humidity = humidity;
-            this._pressure = pressure;
+            this._quality = quality;
             MeasurementsChanged();
         }
     }
