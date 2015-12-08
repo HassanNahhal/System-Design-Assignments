@@ -8,7 +8,14 @@ namespace AssignmentSysDev4
     public class Brand
     {
         private string name;
-        private Plane PlaneType;
+       // private Plane PlaneType;
+
+        public string Name
+        {
+            get {return name;}
+            set { name = value; }
+
+        }
 
         public void AddBrand()
         {
@@ -36,18 +43,15 @@ namespace AssignmentSysDev4
         }
 
 
-        public void voidAddPlanes()
+        public void AddPlanes(int modelNumber, int numberToAdd)
         {
-           /* PlaneCreator myCreator = new PlaneCreator();
-            IPlane Administrator1 = myCreator.FactoryMethod(1);
-            Console.WriteLine("New employee 1 has title: " + Administrator1.GetTitle());
-            //Console.ReadKey();
-            IEmployee Manager1 = myCreator.FactoryMethod(2);
-            Console.WriteLine("New employee 2 has title:" + Manager1.GetTitle());
-            //Console.ReadKey();
-            IEmployee Clerk1 = myCreator.FactoryMethod(3);
-            Console.WriteLine("New employee 3 has title: " + Clerk1.GetTitle());
-            Console.ReadKey();*/
+            for (int x = 0; x < numberToAdd; x++)
+            {
+                //throw new System.NotImplementedException();
+                PlaneCreator myPlaneCreator = new PlaneCreator();
+                IPlane ConcretePlane = myPlaneCreator.FactoryMethod(modelNumber);
+                Console.WriteLine(this.name + " has plane: " + ConcretePlane.GetModel());
+            }
         }
 
         public void ViewPlane()

@@ -8,15 +8,24 @@ namespace AssignmentSysDev4
 {
     //class FactoryMethod
     //{
-    public interface IEmployee
+    /*public interface IEmployee
     {
 
         //void method();
         string GetTitle();
 
+    }*/
+
+    public interface IEmployee
+    {
+
+        //void method();
+        //string GetTitle();
+        string GetTitle();
+
     }
 
-    class AdministratorEmployee : IEmployee
+    class AdministratorEmployee : Employee, IEmployee
     {
         //public void Method() { }
         string title = "Administrator";
@@ -27,7 +36,7 @@ namespace AssignmentSysDev4
 
     }
 
-    class ManagerEmployee : IEmployee
+    class ManagerEmployee : Employee, IEmployee
     {
         //public void Method() { }
         string title = "Manager";
@@ -37,7 +46,7 @@ namespace AssignmentSysDev4
         }
     }
 
-    class ClerkEmployee : IEmployee
+    class ClerkEmployee : Employee, IEmployee
     {
         //public void Method() { }
         string title = "Clerk";
